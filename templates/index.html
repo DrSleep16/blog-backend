@@ -41,7 +41,7 @@
               <div class="flex-fill{% if not forloop.last %} mr-3{% endif %}">
               <div class="card blog__slide text-center">
                 <div class="blog__slide__img">
-                  <img class="card-img rounded-0" src="{% static post.image_url %}" alt="">
+                  <img class="card-img rounded-0" src="{% static post.image_url %}" alt="Баннер блога">
                 </div>
                 <div class="blog__slide__content">
                   <h3><a href="{% url 'post_detail' post.slug %}">{{post.title}}</a></h3>
@@ -49,7 +49,7 @@
                 </div>
               </div>
             </div>
-            {%endfor%}
+              {%endfor%}
           </div>
         </div>
       </section>
@@ -63,7 +63,7 @@
               {% for post in fresh_posts %}
                 <div class="single-recent-blog-post">
                   <div class="thumb">
-                    <img class="img-fluid" src="{% if post.image_url %} {% static post.image_url %} {% else %}{% static 'img/banner/blog.png' %}{% endif %}" alt="">
+                    <img class="img-fluid" src="{% if post.image_url %} {% static post.image_url %} {% else %}{% static 'img/banner/blog.png' %}{% endif %}" alt="Баннер блога">
                     <ul class="thumb-info" style="max-width: 550px">
                       <li><i class="ti-user"></i>{{post.author}}</li>
                       <li><i class="ti-notepad"></i>{{post.published_at}}</li>
